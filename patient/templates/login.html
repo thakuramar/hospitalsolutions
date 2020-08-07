@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% load crispy_forms_tags %}
+{% block content%}
+
+<div class="container">
+    <h2 class="text-center">Admin Login </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form|crispy }}
+
+        <label>Admin Id</label>
+        <input type="text" class="form-control" name="uname">
+        <label>Password </label>
+        <input type="password" class="form-control" name="pwd">
+        <br>
+        <input type="submit" value="Login" class="form-control btn btn-primary">
+<img src="{% static 'patient/images/doclogo.jpg' %}">
+
+    </form>
+</div>
+{% endblock %}

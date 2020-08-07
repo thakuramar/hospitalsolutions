@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block content%}
+
+<h1>Doctor Detail </h1>
+<h2>Doctor Name:      {{doctor.name}}</h2>
+<h2>Doctor Phone :   {{doctor.mobile}}</h2>
+<h2><a href="/patient/doctor">back</a></h2>
+
+{% endblock %}
